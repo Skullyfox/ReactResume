@@ -1,4 +1,5 @@
 import React from 'react';
+import Portfolio from './pages/Portfolio/Portfolio.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <h1>Hello World</h1>
+            <Portfolio />
         )
     }
 }

@@ -66,46 +66,50 @@ a, a:hover, a:visited {
     see https://bulma.io/documentation/overview/customize/
     @author Daria <lo.pennequin@gmail.com>
     @mixin =========================*/
+@font-face {
+  font-family: "OpenSans-Condensed";
+  src: url("../assets/fonts/OpenSansCondensed-Light.ttf"); }
+
 /*============================
     Fluid Typography mixin.
     Provided a range of browser width and font sizes, the typography of your app will automaticcaly and progressively change its size.
     @author Daria <lo.pennequin@gmail.com>
     ==========================*/
 .is-primary {
-  background-color: #439cef; }
+  background-color: #eb3b5a; }
 
 .is-primary-light {
-  background-color: #72b5f3; }
+  background-color: #f06981; }
 
 .is-primary-dark {
-  background-color: #1483eb; }
+  background-color: #dd1739; }
 
 .is-primary-half {
-  background-color: rgba(67, 156, 239, 0.5); }
+  background-color: rgba(235, 59, 90, 0.5); }
 
 .is-secondary {
-  background-color: #6eccf7; }
+  background-color: #fc5c65; }
 
 .is-secondary-light {
-  background-color: #9eddfa; }
+  background-color: #fd8e94; }
 
 .is-secondary-dark {
-  background-color: #3dbbf5; }
+  background-color: #fb2a36; }
 
 .is-secondary-half {
-  background-color: rgba(110, 204, 247, 0.5); }
+  background-color: rgba(252, 92, 101, 0.5); }
 
 .is-accent {
-  background-color: #fac16b; }
+  background-color: #20bf6b; }
 
 .is-accent-light {
-  background-color: #fcd69c; }
+  background-color: #35dd84; }
 
 .is-accent-dark {
-  background-color: #f9ac39; }
+  background-color: #199353; }
 
 .is-accent-half {
-  background-color: rgba(250, 193, 107, 0.5); }
+  background-color: rgba(32, 191, 107, 0.5); }
 
 .is-info {
   background-color: #0daaf2; }
@@ -120,37 +124,37 @@ a, a:hover, a:visited {
   background-color: #ed392c; }
 
 .is-white {
-  background-color: white; }
+  background-color: #d1d8e0; }
 
 .is-black {
   background-color: #333333; }
 
 .txt-primary, .txt-primary:hover, .txt-primary:visited {
-  color: #439cef; }
+  color: #eb3b5a; }
 
 .txt-primary-light, .txt-primary-light:hover, .txt-primary-light:visited {
-  color: #72b5f3; }
+  color: #f06981; }
 
 .txt-primary-dark, .txt-primary-dark:hover, .txt-primary-dark:visited {
-  color: #1483eb; }
+  color: #dd1739; }
 
 .txt-secondary, .txt-secondary:hover, .txt-secondary:visited {
-  color: #6eccf7; }
+  color: #fc5c65; }
 
 .txt-secondary-light, .txt-secondary-light:hover, .txt-secondary-light:visited {
-  color: #9eddfa; }
+  color: #fd8e94; }
 
 .txt-secondary-dark, .txt-secondary-dark:hover, .txt-secondary-dark:visited {
-  color: #3dbbf5; }
+  color: #fb2a36; }
 
 .txt-accent, .txt-accent:hover, .txt-accent:visited {
-  color: #fac16b; }
+  color: #20bf6b; }
 
 .txt-accent-light, .txt-accent-light:hover, .txt-accent-light:visited {
-  color: #fcd69c; }
+  color: #35dd84; }
 
 .txt-accent-dark, .txt-accent-dark:hover, .txt-accent-dark:visited {
-  color: #f9ac39; }
+  color: #199353; }
 
 .txt-info, .txt-info:hover, .txt-info:visited {
   color: #0daaf2; }
@@ -168,7 +172,7 @@ a, a:hover, a:visited {
   color: #333333; }
 
 .txt-white, .txt-white:hover, .txt-white:visited {
-  color: white; }
+  color: #d1d8e0; }
 
 .txt-size-1 {
   font-size: 0.75em; }
@@ -204,7 +208,7 @@ a, a:hover, a:visited {
   text-align: right; }
 
 .txt-font-primary {
-  font-family: Helvetica, Arial, sans serif; }
+  font-family: "OpenSans-Condensed", Arial, sans serif; }
 
 .txt-font-title {
   font-family: Helvetica, Arial, sans serif; }
@@ -315,6 +319,44 @@ a, a:hover, a:visited {
     .container {
       max-width: 900px; } }
 
+.Portfolio {
+  height: auto;
+  width: 100%; }
+
+.Header {
+  height: 100vh;
+  width: 100%;
+  background-color: #35dd84;
+  font-family: "OpenSans-Condensed", Arial, sans serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .Header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 70%;
+    border: 1px solid #333333; }
+    .Header .content #titleHeader {
+      font-size: 3.5em;
+      margin: 0 0 10px 0;
+      transition: all 1s; }
+      .Header .content #titleHeader.hidden {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+        opacity: 0; }
+    .Header .content #subtitleHeader {
+      font-size: 1.5em;
+      transition: all 1s; }
+      .Header .content #subtitleHeader.hidden {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+        opacity: 0; }
+
 html {
   font-size: 12px; }
   @media screen and (min-width: 350px) {
@@ -325,6 +367,6 @@ html {
       font-size: 18px; } }
 
 body {
-  font-family: Helvetica, Arial, sans serif;
+  font-family: "OpenSans-Condensed", Arial, sans serif;
   font-size: 0.85rem;
   background-color: #f2f2f2; }

@@ -6,17 +6,17 @@
 
 //COLORS
     //See maps.scss for the base colors map. The colorMap function also provide a color swatch for each color with 10 shades of light and dark  with the following keys : colorname-l-(1 to 10), colorname-d-(1 to 10)
-$primary : color(blue-l-2)
+$primary : #eb3b5a
 $primary-light : lighten($primary, 10%)
 $primary-dark : darken($primary, 10%)
 $primary-half : transparentize($primary, 0.5)
 
-$secondary : color(lightblue-l-4)
+$secondary : #fc5c65
 $secondary-light : lighten($secondary, 10%)
 $secondary-dark : darken($secondary, 10%)
 $secondary-half : transparentize($secondary, 0.5)
 
-$accent : color(orange-l-4)
+$accent : #20bf6b
 $accent-light : lighten($accent, 10%)
 $accent-dark : darken($accent, 10%)
 $accent-half : transparentize($accent, 0.5)
@@ -24,7 +24,7 @@ $accent-half : transparentize($accent, 0.5)
 $background : color(white-d-1)
 $foreground : color(white)
 
-$white: color(white)
+$white: #d1d8e0
 $black: color(black-l-4)
 
 $info : color(lightblue)
@@ -33,10 +33,15 @@ $warning : color(amber-l-1)
 $danger : color(red-l-1)
 
 //FONTS
+
+@font-face
+    font-family: "OpenSans-Condensed"
+    src: url('../assets/fonts/OpenSansCondensed-Light.ttf')
+
 $min_font : 12px
 $max_font : 18px
 
-$font-primary : Helvetica, Arial, sans serif
+$font-primary : "OpenSans-Condensed", Arial, sans serif
 $font-title : Helvetica, Arial, sans serif
 
 //LAYOUT
