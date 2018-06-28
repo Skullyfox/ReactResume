@@ -76,40 +76,40 @@ a, a:hover, a:visited {
     @author Daria <lo.pennequin@gmail.com>
     ==========================*/
 .is-primary {
-  background-color: #eb3b5a; }
+  background-color: #3742fa; }
 
 .is-primary-light {
-  background-color: #f06981; }
+  background-color: #6971fb; }
 
 .is-primary-dark {
-  background-color: #dd1739; }
+  background-color: #0614f8; }
 
 .is-primary-half {
-  background-color: rgba(235, 59, 90, 0.5); }
+  background-color: rgba(55, 66, 250, 0.5); }
 
 .is-secondary {
-  background-color: #fc5c65; }
+  background-color: #70a1ff; }
 
 .is-secondary-light {
-  background-color: #fd8e94; }
+  background-color: #a3c3ff; }
 
 .is-secondary-dark {
-  background-color: #fb2a36; }
+  background-color: #3d7fff; }
 
 .is-secondary-half {
-  background-color: rgba(252, 92, 101, 0.5); }
+  background-color: rgba(112, 161, 255, 0.5); }
 
 .is-accent {
-  background-color: #20bf6b; }
+  background-color: #FD7272; }
 
 .is-accent-light {
-  background-color: #35dd84; }
+  background-color: #fea4a4; }
 
 .is-accent-dark {
-  background-color: #199353; }
+  background-color: #fc4040; }
 
 .is-accent-half {
-  background-color: rgba(32, 191, 107, 0.5); }
+  background-color: rgba(253, 114, 114, 0.5); }
 
 .is-info {
   background-color: #0daaf2; }
@@ -130,31 +130,31 @@ a, a:hover, a:visited {
   background-color: #333333; }
 
 .txt-primary, .txt-primary:hover, .txt-primary:visited {
-  color: #eb3b5a; }
+  color: #3742fa; }
 
 .txt-primary-light, .txt-primary-light:hover, .txt-primary-light:visited {
-  color: #f06981; }
+  color: #6971fb; }
 
 .txt-primary-dark, .txt-primary-dark:hover, .txt-primary-dark:visited {
-  color: #dd1739; }
+  color: #0614f8; }
 
 .txt-secondary, .txt-secondary:hover, .txt-secondary:visited {
-  color: #fc5c65; }
+  color: #70a1ff; }
 
 .txt-secondary-light, .txt-secondary-light:hover, .txt-secondary-light:visited {
-  color: #fd8e94; }
+  color: #a3c3ff; }
 
 .txt-secondary-dark, .txt-secondary-dark:hover, .txt-secondary-dark:visited {
-  color: #fb2a36; }
+  color: #3d7fff; }
 
 .txt-accent, .txt-accent:hover, .txt-accent:visited {
-  color: #20bf6b; }
+  color: #FD7272; }
 
 .txt-accent-light, .txt-accent-light:hover, .txt-accent-light:visited {
-  color: #35dd84; }
+  color: #fea4a4; }
 
 .txt-accent-dark, .txt-accent-dark:hover, .txt-accent-dark:visited {
-  color: #199353; }
+  color: #fc4040; }
 
 .txt-info, .txt-info:hover, .txt-info:visited {
   color: #0daaf2; }
@@ -326,7 +326,7 @@ a, a:hover, a:visited {
 .Header {
   height: 100vh;
   width: 100%;
-  background-color: #35dd84;
+  background: linear-gradient(45deg, #6971fb 0%, #70a1ff 150%);
   font-family: "OpenSans-Condensed", Arial, sans serif;
   color: white;
   display: flex;
@@ -339,8 +339,7 @@ a, a:hover, a:visited {
     justify-content: center;
     align-items: center;
     height: 25%;
-    width: 70%;
-    border: 1px solid #333333; }
+    width: 70%; }
     .Header .content #titleHeader {
       font-size: 3.5em;
       margin: 0 0 10px 0;
@@ -356,6 +355,48 @@ a, a:hover, a:visited {
         -webkit-transform: translateY(-100%);
                 transform: translateY(-100%);
         opacity: 0; }
+
+.ArticlesContainer {
+  padding: 10px 0;
+  height: auto;
+  widht: 100%;
+  background-color: #d1d8e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+@media screen and (max-width: 600px) {
+  .ArticlesContainer {
+    padding: 0; } }
+
+.Articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 3px solid #3742fa; }
+
+@media screen and (max-width: 1200px) {
+  .Articles {
+    grid-template-columns: 1fr 1fr 1fr; } }
+
+@media screen and (max-width: 900px) {
+  .Articles {
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 600px) {
+  .Articles {
+    width: 100%;
+    grid-template-columns: 1fr; } }
+
+.ArticlesItems {
+  height: 250px;
+  width: 250px;
+  border: 1px solid #333333;
+  margin: 25px; }
+
+@media screen and (max-width: 600px) {
+  .ArticlesItems {
+    width: 100%;
+    margin: 25px 0; } }
 
 html {
   font-size: 12px; }

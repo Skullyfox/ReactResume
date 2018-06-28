@@ -1,0 +1,17 @@
+.ArticlesContainer
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    border: 3px solid $primary
+
+@media screen and (max-width: 1200px)
+    .ArticlesContainer
+        grid-template-columns: 1fr 1fr 1fr
+
+@media screen and (max-width: 900px)
+    .ArticlesContainer
+        grid-template-columns: 1fr 1fr
+
+@media screen and (max-width: 600px)
+    .ArticlesContainer
+        width: 100%
+        grid-template-columns: 1fr

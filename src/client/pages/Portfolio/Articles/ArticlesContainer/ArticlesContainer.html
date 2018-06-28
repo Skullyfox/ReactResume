@@ -1,0 +1,7 @@
+<rt-import name="default" as="ArticlesItems" from="./ArticlesItems/ArticlesItems.jsx" />
+
+<div class="Articles">
+    <rt-virtual rt-repeat="Article in this.state.Articles">
+        <ArticlesItems />
+    </rt-virtual>
+</div>
