@@ -1,0 +1,58 @@
+section
+    padding: 50px 10px 0 10px
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    transition: all 1s
+    &.hidden
+        opacity: 0
+
+
+    .cardContainer
+        width: 30%
+        .ui.card
+            width: 100%
+            .content
+                overflow-wrap: break-word
+                .description
+                        font-size: 1.2em
+                        li
+                            margin: 20px 0
+                        a
+                            color: $secondary
+                            &:hover
+                                color: $secondary-dark
+
+    .itemContainer
+        margin: 0 0 0 10px
+        width: 100%
+        .ui.items
+            background-color: $foreground
+            padding: 10px
+            border: 1px solid #d4d4d5
+            border-radius: .28571429rem
+            height: 350px
+            .item
+                .content
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    .infos
+                        padding: 10px
+                        .header
+                            font-weight: bold
+                            font-size: 1.25em
+                        .description
+                            font-size: 1.1em
+                            li
+                                margin: 20px 0
+                    .se
+                        padding: 10px
+                        .header
+                            font-weight: bold
+                            font-size: 1.25em
+                        .description
+                            font-size: 1.1em
+                            li
+                                margin: 20px 0

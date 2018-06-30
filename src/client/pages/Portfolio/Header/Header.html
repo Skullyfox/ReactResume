@@ -1,6 +1,9 @@
-<div class="Header">
+<header class="Header {this.state.isLoad ? null : 'hidden'}">
     <div class="content">
-        <p id="titleHeader" class="hidden">Portfolio Template</p>
-        <p id="subtitleHeader" class="hidden">Build with react</p>
+        <div id="roundedPicContent" class="{this.state.isLoad ? null : 'hidden'}">
+            <img src="https://i.pinimg.com/originals/b2/d1/11/b2d111a4a3a907d3506a7676687bf9cd.jpg" alt="">
+        </div>
+        <p id="titleHeader" class="{this.state.isLoad ? null : 'hidden'}">Resume Template</p>
+        <p id="subtitleHeader" class="{this.state.isLoad ? null : 'hidden'}">Build with React & Semantic Ui</p>
     </div>
-</div>
+</header>

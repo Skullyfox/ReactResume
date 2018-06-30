@@ -324,6 +324,9 @@ a, a:hover, a:visited {
   width: 100%; }
 
 .Header {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
   height: 100vh;
   width: 100%;
   background: linear-gradient(45deg, #6971fb 0%, #70a1ff 150%);
@@ -331,15 +334,35 @@ a, a:hover, a:visited {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-around;
+  align-items: center;
+  transition: all 1s; }
+  .Header.hidden {
+    opacity: 0;
+    height: 0; }
   .Header .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25%;
+    height: auto;
     width: 70%; }
+    .Header .content #roundedPicContent {
+      height: 150px;
+      width: 150px;
+      border-radius: 100%;
+      overflow: hidden;
+      background-color: #f2f2f2;
+      transition: all 1s; }
+      .Header .content #roundedPicContent.hidden {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        opacity: 0; }
+      .Header .content #roundedPicContent img {
+        height: 150px;
+        width: 150px;
+        -o-object-fit: cover;
+           object-fit: cover; }
     .Header .content #titleHeader {
       font-size: 3.5em;
       margin: 0 0 10px 0;
@@ -356,47 +379,60 @@ a, a:hover, a:visited {
                 transform: translateY(-100%);
         opacity: 0; }
 
-.ArticlesContainer {
-  padding: 10px 0;
-  height: auto;
-  widht: 100%;
-  background-color: #d1d8e0;
+section {
+  padding: 50px 10px 0 10px;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
-
-@media screen and (max-width: 600px) {
-  .ArticlesContainer {
-    padding: 0; } }
-
-.Articles {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 3px solid #3742fa; }
-
-@media screen and (max-width: 1200px) {
-  .Articles {
-    grid-template-columns: 1fr 1fr 1fr; } }
-
-@media screen and (max-width: 900px) {
-  .Articles {
-    grid-template-columns: 1fr 1fr; } }
-
-@media screen and (max-width: 600px) {
-  .Articles {
-    width: 100%;
-    grid-template-columns: 1fr; } }
-
-.ArticlesItems {
-  height: 250px;
-  width: 250px;
-  border: 1px solid #333333;
-  margin: 25px; }
-
-@media screen and (max-width: 600px) {
-  .ArticlesItems {
-    width: 100%;
-    margin: 25px 0; } }
+  justify-content: flex-start;
+  transition: all 1s; }
+  section.hidden {
+    opacity: 0; }
+  section .cardContainer {
+    width: 30%; }
+    section .cardContainer .ui.card {
+      width: 100%; }
+      section .cardContainer .ui.card .content {
+        overflow-wrap: break-word; }
+        section .cardContainer .ui.card .content .description {
+          font-size: 1.2em; }
+          section .cardContainer .ui.card .content .description li {
+            margin: 20px 0; }
+          section .cardContainer .ui.card .content .description a {
+            color: #70a1ff; }
+            section .cardContainer .ui.card .content .description a:hover {
+              color: #3d7fff; }
+  section .itemContainer {
+    margin: 0 0 0 10px;
+    width: 100%; }
+    section .itemContainer .ui.items {
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #d4d4d5;
+      border-radius: .28571429rem;
+      height: 350px; }
+      section .itemContainer .ui.items .item .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        section .itemContainer .ui.items .item .content .infos {
+          padding: 10px; }
+          section .itemContainer .ui.items .item .content .infos .header {
+            font-weight: bold;
+            font-size: 1.25em; }
+          section .itemContainer .ui.items .item .content .infos .description {
+            font-size: 1.1em; }
+            section .itemContainer .ui.items .item .content .infos .description li {
+              margin: 20px 0; }
+        section .itemContainer .ui.items .item .content .se {
+          padding: 10px; }
+          section .itemContainer .ui.items .item .content .se .header {
+            font-weight: bold;
+            font-size: 1.25em; }
+          section .itemContainer .ui.items .item .content .se .description {
+            font-size: 1.1em; }
+            section .itemContainer .ui.items .item .content .se .description li {
+              margin: 20px 0; }
 
 html {
   font-size: 12px; }

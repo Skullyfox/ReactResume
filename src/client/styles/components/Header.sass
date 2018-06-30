@@ -1,4 +1,6 @@
 .Header
+    position: relative
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%)
     height: 100vh
     width: 100%
     background: linear-gradient(45deg, $primary-light 0%, $secondary 150% )
@@ -7,16 +9,37 @@
 
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: space-around
     align-items: center
+
+    transition: all 1s
+    &.hidden
+        opacity: 0
+        height: 0
 
     .content
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        height: 25%
+        height: auto
         width: 70%
+
+        #roundedPicContent
+            height: 150px
+            width: 150px
+            border-radius: 100%
+            overflow: hidden
+            background-color: $background
+            transition: all 1s
+            &.hidden
+                transform: scale(0)
+                opacity: 0
+
+            img
+                height: 150px
+                width: 150px
+                object-fit: cover
 
         #titleHeader
             font-size: 3.5em
