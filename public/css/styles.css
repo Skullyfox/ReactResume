@@ -445,49 +445,63 @@ section {
 
 .Competences {
   position: relative;
-  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 90%, 0% 100%);
-          clip-path: polygon(0 15%, 100% 0%, 100% 90%, 0% 100%);
-  height: 100vh;
+  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 95%, 0% 100%);
+          clip-path: polygon(0 15%, 100% 0%, 100% 95%, 0% 100%);
+  height: auto;
   width: 100%;
   background: linear-gradient(-45deg, #14dba8 0%, #10ac84 150%);
   font-family: "OpenSans-Condensed", Arial, sans serif;
   color: white;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 20px 30px 20px;
   transition: all 1s; }
   .Competences.hidden {
     opacity: 0;
     height: 0; }
   .Competences .content {
-    height: 70vh;
+    margin: 0 auto;
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 80vh; }
     .Competences .content .item {
-      height: 80vh;
+      display: grid;
+      grid-template-rows: 1fr 3fr;
+      height: auto;
       width: 90%;
+      margin: 20px auto 0 auto;
       border: 1px solid #222;
-      border-radius: .28571429rem; }
+      border-radius: .28571429rem;
+      color: #333333; }
       .Competences .content .item .head {
-        height: 20%;
         background-color: #f2f2f2;
         border-radius: .28571429rem .28571429rem 0 0;
         border-bottom: 1px solid rgba(55, 55, 55, 0.5);
         font-size: 2em;
-        color: #333333;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-      .Competences .content .item .content {
-        height: 80%;
+      .Competences .content .item .itemContent {
+        overflow-y: scroll;
+        text-align: center;
         width: 100%;
         background-color: #f2f2f2;
-        color: #ff50f4;
         border-radius: 0 0 .28571429rem .28571429rem; }
+        .Competences .content .item .itemContent .icon {
+          font-size: 5em; }
+        .Competences .content .item .itemContent p {
+          font-size: 1.2em; }
+        .Competences .content .item .itemContent div {
+          padding: 10px; }
+          .Competences .content .item .itemContent div.html:hover {
+            background-color: rgba(82, 245, 122, 0.3); }
+
+@media screen and (max-width: 770px) {
+  .Competences {
+    padding: 210px 20px 80px 20px; }
+    .Competences .content {
+      grid-template-rows: repeat(3 70vh);
+      grid-template-columns: 1fr; } }
 
 html {
   font-size: 12px; }
@@ -502,3 +516,5 @@ body {
   font-family: "OpenSans-Condensed", Arial, sans serif;
   font-size: 0.85rem;
   background-color: #f2f2f2; }
+  body * {
+    box-sizing: border-box; }

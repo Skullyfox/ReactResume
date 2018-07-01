@@ -1,6 +1,8 @@
 import React from 'react';
 import template      from './template.html.js';
-import Tinder      from '../../../components/svg/Tinder';
+import Icon from 'semantic-ui-react';
+
+
 class Competences extends React.Component {
     constructor(props){
         super(props);
