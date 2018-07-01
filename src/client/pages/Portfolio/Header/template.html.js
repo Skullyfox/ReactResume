@@ -13,5 +13,8 @@ export default function () {
     }, 'Resume Template'), React.createElement('p', {
         'id': 'subtitleHeader',
         'className': this.state.isLoad ? null : 'hidden'
-    }, 'Build with React & Semantic Ui')));
+    }, 'Build with React & Semantic Ui'), React.createElement('p', {
+        'id': 'author',
+        'className': this.state.isLoad ? null : 'hidden'
+    }, 'by Logan Wilquin')));
 }

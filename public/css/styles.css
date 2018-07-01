@@ -88,16 +88,16 @@ a, a:hover, a:visited {
   background-color: rgba(55, 66, 250, 0.5); }
 
 .is-secondary {
-  background-color: #70a1ff; }
+  background-color: #10ac84; }
 
 .is-secondary-light {
-  background-color: #a3c3ff; }
+  background-color: #14dba8; }
 
 .is-secondary-dark {
-  background-color: #3d7fff; }
+  background-color: #0c7d60; }
 
 .is-secondary-half {
-  background-color: rgba(112, 161, 255, 0.5); }
+  background-color: rgba(16, 172, 132, 0.5); }
 
 .is-accent {
   background-color: #FD7272; }
@@ -139,13 +139,13 @@ a, a:hover, a:visited {
   color: #0614f8; }
 
 .txt-secondary, .txt-secondary:hover, .txt-secondary:visited {
-  color: #70a1ff; }
+  color: #10ac84; }
 
 .txt-secondary-light, .txt-secondary-light:hover, .txt-secondary-light:visited {
-  color: #a3c3ff; }
+  color: #14dba8; }
 
 .txt-secondary-dark, .txt-secondary-dark:hover, .txt-secondary-dark:visited {
-  color: #3d7fff; }
+  color: #0c7d60; }
 
 .txt-accent, .txt-accent:hover, .txt-accent:visited {
   color: #FD7272; }
@@ -325,11 +325,11 @@ a, a:hover, a:visited {
 
 .Header {
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg, #6971fb 0%, #70a1ff 150%);
+  background: linear-gradient(45deg, #6971fb 0%, #3742fa 150%);
   font-family: "OpenSans-Condensed", Arial, sans serif;
   color: white;
   display: flex;
@@ -378,6 +378,15 @@ a, a:hover, a:visited {
         -webkit-transform: translateY(-100%);
                 transform: translateY(-100%);
         opacity: 0; }
+    .Header .content #author {
+      margin: 10px 0 0 0;
+      color: #f2f2f2;
+      font-size: 1em;
+      transition: all 1s; }
+      .Header .content #author.hidden {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+        opacity: 0; }
 
 section {
   padding: 50px 10px 0 10px;
@@ -400,9 +409,9 @@ section {
           section .cardContainer .ui.card .content .description li {
             margin: 20px 0; }
           section .cardContainer .ui.card .content .description a {
-            color: #70a1ff; }
+            color: #10ac84; }
             section .cardContainer .ui.card .content .description a:hover {
-              color: #3d7fff; }
+              color: #0c7d60; }
   section .itemContainer {
     margin: 0 0 0 10px;
     width: 100%; }
@@ -433,6 +442,52 @@ section {
             font-size: 1.1em; }
             section .itemContainer .ui.items .item .content .se .description li {
               margin: 20px 0; }
+
+.Competences {
+  position: relative;
+  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 90%, 0% 100%);
+          clip-path: polygon(0 15%, 100% 0%, 100% 90%, 0% 100%);
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #14dba8 0%, #10ac84 150%);
+  font-family: "OpenSans-Condensed", Arial, sans serif;
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s; }
+  .Competences.hidden {
+    opacity: 0;
+    height: 0; }
+  .Competences .content {
+    height: 70vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .Competences .content .item {
+      height: 80vh;
+      width: 90%;
+      border: 1px solid #222;
+      border-radius: .28571429rem; }
+      .Competences .content .item .head {
+        height: 20%;
+        background-color: #f2f2f2;
+        border-radius: .28571429rem .28571429rem 0 0;
+        border-bottom: 1px solid rgba(55, 55, 55, 0.5);
+        font-size: 2em;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .Competences .content .item .content {
+        height: 80%;
+        width: 100%;
+        background-color: #f2f2f2;
+        color: #ff50f4;
+        border-radius: 0 0 .28571429rem .28571429rem; }
 
 html {
   font-size: 12px; }

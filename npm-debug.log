@@ -1,18 +1,19 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'watch' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'svg' ]
 2 info using npm@3.5.2
 3 info using node@v8.10.0
-4 verbose run-script [ 'prewatch', 'watch', 'postwatch' ]
-5 info lifecycle node-react-skeleton@1.0.0~prewatch: node-react-skeleton@1.0.0
-6 silly lifecycle node-react-skeleton@1.0.0~prewatch: no script for prewatch, continuing
-7 info lifecycle node-react-skeleton@1.0.0~watch: node-react-skeleton@1.0.0
-8 verbose lifecycle node-react-skeleton@1.0.0~watch: unsafe-perm in lifecycle true
-9 verbose lifecycle node-react-skeleton@1.0.0~watch: PATH: /usr/share/npm/bin/node-gyp-bin:/home/skullyfox/Documents/Dev/ReactResume/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/skullyfox/Android/Sdk/tools:/home/skullyfox/Android/Sdk/platform-tools
-10 verbose lifecycle node-react-skeleton@1.0.0~watch: CWD: /home/skullyfox/Documents/Dev/ReactResume
-11 silly lifecycle node-react-skeleton@1.0.0~watch: Args: [ '-c', 'node node_modules/gulp/bin/gulp' ]
-12 silly lifecycle node-react-skeleton@1.0.0~watch: Returned: code: 1  signal: null
-13 info lifecycle node-react-skeleton@1.0.0~watch: Failed to exec watch script
-14 verbose stack Error: node-react-skeleton@1.0.0 watch: `node node_modules/gulp/bin/gulp`
+4 verbose run-script [ 'presvg', 'svg', 'postsvg' ]
+5 info lifecycle node-react-skeleton@1.0.0~presvg: node-react-skeleton@1.0.0
+6 silly lifecycle node-react-skeleton@1.0.0~presvg: no script for presvg, continuing
+7 info lifecycle node-react-skeleton@1.0.0~svg: node-react-skeleton@1.0.0
+8 verbose lifecycle node-react-skeleton@1.0.0~svg: unsafe-perm in lifecycle true
+9 verbose lifecycle node-react-skeleton@1.0.0~svg: PATH: /usr/share/npm/bin/node-gyp-bin:/home/skullyfox/Documents/Dev/ReactResume/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/skullyfox/Android/Sdk/tools:/home/skullyfox/Android/Sdk/platform-tools
+10 verbose lifecycle node-react-skeleton@1.0.0~svg: CWD: /home/skullyfox/Documents/Dev/ReactResume
+11 silly lifecycle node-react-skeleton@1.0.0~svg: Args: [ '-c',
+11 silly lifecycle   'svgr --svg-attributes \'fill=currentColor\' --icon src/client/svg/  src/client/components/svg/svgBundle.js' ]
+12 silly lifecycle node-react-skeleton@1.0.0~svg: Returned: code: 1  signal: null
+13 info lifecycle node-react-skeleton@1.0.0~svg: Failed to exec svg script
+14 verbose stack Error: node-react-skeleton@1.0.0 svg: `svgr --svg-attributes 'fill=currentColor' --icon src/client/svg/  src/client/components/svg/svgBundle.js`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
 14 verbose stack     at emitTwo (events.js:126:13)
@@ -25,18 +26,18 @@
 15 verbose pkgid node-react-skeleton@1.0.0
 16 verbose cwd /home/skullyfox/Documents/Dev/ReactResume
 17 error Linux 4.15.0-23-generic
-18 error argv "/usr/bin/node" "/usr/bin/npm" "run" "watch"
+18 error argv "/usr/bin/node" "/usr/bin/npm" "run" "svg"
 19 error node v8.10.0
 20 error npm  v3.5.2
 21 error code ELIFECYCLE
-22 error node-react-skeleton@1.0.0 watch: `node node_modules/gulp/bin/gulp`
+22 error node-react-skeleton@1.0.0 svg: `svgr --svg-attributes 'fill=currentColor' --icon src/client/svg/  src/client/components/svg/svgBundle.js`
 22 error Exit status 1
-23 error Failed at the node-react-skeleton@1.0.0 watch script 'node node_modules/gulp/bin/gulp'.
+23 error Failed at the node-react-skeleton@1.0.0 svg script 'svgr --svg-attributes 'fill=currentColor' --icon src/client/svg/  src/client/components/svg/svgBundle.js'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the node-react-skeleton package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     node node_modules/gulp/bin/gulp
+23 error     svgr --svg-attributes 'fill=currentColor' --icon src/client/svg/  src/client/components/svg/svgBundle.js
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs node-react-skeleton
 23 error Or if that isn't available, you can get their info via:
